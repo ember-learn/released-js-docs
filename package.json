@@ -1,0 +1,18 @@
+{
+  "name": "@ember-learn/released-js-docs",
+  "version": "1.0.0",
+  "repository": "https://github.com/ember-learn/released-js-docs.git",
+  "license": "MIT",
+  "author": "Sivakumar Kailasam <siva@rubberduck.engineering>",
+  "main": "index.js",
+  "scripts": {
+    "prepack": "node lib/prepare-for-publish.js"
+  },
+  "devDependencies": {
+    "compare-versions": "^3.5.1",
+    "find-latest-patch-versions": "^0.2.1",
+    "find-versions": "^3.1.0",
+    "fs-extra": "^8.1.0",
+    "glob": "^7.1.5"
+  }
+}
