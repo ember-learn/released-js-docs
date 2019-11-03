@@ -848,6 +848,11 @@ universalify@^0.1.0:
   resolved "https://registry.yarnpkg.com/universalify/-/universalify-0.1.2.tgz#b646f69be3942dabcecc9d6639c80dc105efaa66"
   integrity sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==
 
+url-exists-promise@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/url-exists-promise/-/url-exists-promise-1.0.2.tgz#deec077c1a77ca4acc9e3212e1e7153d06d57a3a"
+  integrity sha512-iEwP6Y4tDEU/uhdGyM0hCbNfqZVHQWNyyQDFMZUzhIcrLQVKGB8K0mzVEsdXyQRVNeU+DLJuWJgouNmvu5ffpg==
+
 url-parse-lax@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/url-parse-lax/-/url-parse-lax-3.0.0.tgz#16b5cafc07dbe3676c1b1999177823d6503acb0c"
