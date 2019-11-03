@@ -2,6 +2,10 @@ name: Automated release
 
 on: [push]
 
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -9,13 +13,21 @@ jobs:
     steps:
       - uses: actions/checkout@v1
         name: Checkout code
+      
+      - name: Cache node modules
+        uses: actions/cache@preview
+        with:
+          path: ~/.cache/yarn
+          key: ${{ runner.os }}-yarn-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
+          restore-keys: |
+            ${{ runner.os }}-yarn- 
+      
       - name: GitHub Action for Yarn
         uses: Borales/actions-yarn@v2.0.0
         with:
           cmd: install
+    
       - name: Automated release
         uses: mikeal/merge-release@v4.0.7
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+       
         
