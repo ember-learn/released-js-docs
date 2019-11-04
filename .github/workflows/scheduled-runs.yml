@@ -34,7 +34,7 @@ jobs:
           cmd: start
 
       - name: Commit any changes
-        uses: stefanzweifel/git-auto-commit-action@v2.2.0
+        uses: sivakumar-kailasam/git-auto-commit-action@master
         with:
           commit_message: Add newly identified js doc
           branch: ${{ github.head_ref }}
