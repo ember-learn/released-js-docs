@@ -1,6 +1,9 @@
 name: Automated release
 
-on: [push]
+on:
+  push:
+    paths:
+      - 'docs/**/*.json'
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
