@@ -39,4 +39,4 @@ jobs:
           commit_message: Add newly identified js doc
           branch: ${{ github.head_ref }}
           # Optional glob pattern of files which should be added to the commit
-          file_pattern: docs/\*.json
+          file_pattern: docs/**/*.json
