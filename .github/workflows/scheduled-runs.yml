@@ -2,7 +2,7 @@ name: Scheduled runs
 
 on:
   schedule:
-    - cron: '* * * * *'
+    - cron: '15 * * * *'
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
