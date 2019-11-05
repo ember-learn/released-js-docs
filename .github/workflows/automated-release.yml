@@ -1,9 +1,8 @@
 name: Automated release
 
 on:
-  push:
-    paths:
-      - docs/**/*.json
+  schedule:
+    - cron: "20 * * * *"
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
