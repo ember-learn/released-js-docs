@@ -3,7 +3,7 @@ name: Automated release
 on:
   push:
     paths:
-      - 'docs/**/*.json'
+      - docs/**/*.json
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
