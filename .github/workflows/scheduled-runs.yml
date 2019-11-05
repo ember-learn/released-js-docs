@@ -1,13 +1,11 @@
-name: Automated release
+name: Scheduled runs
 
 on:
-  push:
-    paths:
-      - docs/**/*.json
+  schedule:
+    - cron: '15 * * * *'
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
 
 jobs:
   publish:
@@ -30,5 +28,15 @@ jobs:
         with:
           cmd: install
 
-      - name: Automated release
-        uses: mikeal/merge-release@v4.0.7
+      - name: Run doc fetcher process
+        uses: Borales/actions-yarn@v2.0.0
+        with:
+          cmd: start
+
+      - name: Commit any changes
+        uses: sivakumar-kailasam/git-auto-commit-action@master
+        with:
+          commit_message: Add newly identified js doc
+          branch: ${{ github.head_ref }}
+          # Optional glob pattern of files which should be added to the commit
+          file_pattern: docs/**/*.json
