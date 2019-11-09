@@ -1,4 +1,4 @@
-name: Scheduled runs
+name: Cron job
 
 on:
   schedule:
