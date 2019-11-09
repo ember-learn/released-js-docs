@@ -2,7 +2,7 @@ name: Scheduled runs
 
 on:
   schedule:
-    - cron: '15 * * * *'
+    - cron: '5 * * * *'
 
 env:
   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -22,12 +22,6 @@ jobs:
         name: Setup Node.js
         with:
           node-version: 12
-
-      - uses: actions/cache@v1
-        with:
-          path: ~/.cache/yarn
-          key: ${{ runner.os }}-yarn-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
-          restore-keys: ${{ runner.os }}-yarn-
 
       - name: Install dependencies
         uses: Borales/actions-yarn@v2.0.0
