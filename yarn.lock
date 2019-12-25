@@ -14,11 +14,6 @@ archive-type@^4.0.0:
   dependencies:
     file-type "^4.2.0"
 
-array-uniq@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/array-uniq/-/array-uniq-2.1.0.tgz#46603d5e28e79bfd02b046fcc1d77c6820bd8e98"
-  integrity sha512-bdHxtev7FN6+MXI1YFW0Q8mQ8dTJc2S8AMfju+ZR77pbg2yAdVyDlwkaUI7Har0LyOMRFPHrJ9lYdyjZZswdlQ==
-
 balanced-match@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
@@ -319,12 +314,11 @@ find-latest-patch-versions@^0.2.1:
     semver-compare "^1.0.0"
     semver-utils "^1.1.4"
 
-find-versions@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/find-versions/-/find-versions-3.1.0.tgz#10161f29cf3eb4350dec10a29bdde75bff0df32d"
-  integrity sha512-NCTfNiVzeE/xL+roNDffGuRbrWI6atI18lTJ22vKp7rs2OhYzMK3W1dIdO2TUndH/QMcacM4d1uWwgcZcHK69Q==
+find-versions@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/find-versions/-/find-versions-3.2.0.tgz#10297f98030a786829681690545ef659ed1d254e"
+  integrity sha512-P8WRou2S+oe222TOCHitLy8zj+SIsVJh52VP4lvXkaFVnOFFdoWv1H1Jjvel1aI6NCFOAaeAVm8qrI0odiLcww==
   dependencies:
-    array-uniq "^2.1.0"
     semver-regex "^2.0.0"
 
 from2@^2.1.1:
@@ -374,10 +368,10 @@ get-stream@^2.2.0:
     object-assign "^4.0.1"
     pinkie-promise "^2.0.0"
 
-glob@^7.1.5:
-  version "7.1.5"
-  resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.5.tgz#6714c69bee20f3c3e64c4dd905553e532b40cdc0"
-  integrity sha512-J9dlskqUXK1OeTOYBEn5s8aMukWMwWfs+rPTn/jn50Ux4MNXVhubL1wu/j2t+H4NVI+cXEcCaYellqaPVGXNqQ==
+glob@^7.1.6:
+  version "7.1.6"
+  resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.6.tgz#141f33b81a7c2492e125594307480c46679278a6"
+  integrity sha512-LwaxwyZ72Lk7vZINtNNrywX0ZuLyStrdDtabefZKAY5ZGJhVtgdznluResxNmPitE0SAO+O26sWTHeKSI2wMBA==
   dependencies:
     fs.realpath "^1.0.0"
     inflight "^1.0.4"
@@ -626,10 +620,10 @@ p-timeout@^2.0.1:
   dependencies:
     p-finally "^1.0.0"
 
-packages-versions@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/packages-versions/-/packages-versions-1.1.0.tgz#dd78a6af42f6c1476e17acd02920b5718340887c"
-  integrity sha512-/rVz2IQ+0rWEwM/YepMXQdfGnsByVtl+2I5VNT8EIwSSDQOwIpioNUwSFILxElwAPGn91wv/hUQQeNplRbAQxQ==
+packages-versions@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/packages-versions/-/packages-versions-1.1.1.tgz#e55bfe5e8de427fb3a4ff499cbf33337f0db3412"
+  integrity sha512-kzuAjJ1jgCYROFvHqku82HE0l0ZAzzwGps/KYxFAr98fSInA4zvTnAsYihroFbf5MReZliKUKnUvakm+RJKAnQ==
   dependencies:
     semver "^6.3.0"
 
