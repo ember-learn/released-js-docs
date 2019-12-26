@@ -10,6 +10,8 @@
     "prepack": "node -r esm lib/prepare-for-publish.js"
   },
   "devDependencies": {
+    "@semantic-release/git": "^7.0.18",
+    "@semantic-release/release-notes-generator": "^7.3.5",
     "compare-versions": "^3.5.1",
     "download": "^7.1.0",
     "esm": "^3.2.25",
