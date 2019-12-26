@@ -2,7 +2,7 @@ name: Cron job
 
 on:
   schedule:
-    - cron: '5 * * * *'
+    - cron: "5 * * * *"
 
 env:
   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -38,10 +38,10 @@ jobs:
       - name: Commit any changes
         uses: sivakumar-kailasam/git-auto-commit-action@master
         with:
-          commit_message: 'docs: Add newly identified js doc'
+          commit_message: "docs: Add newly identified js doc"
           branch: ${{ github.head_ref }}
           # Optional glob pattern of files which should be added to the commit
           file_pattern: docs/**/*.json
 
-      - name: Release
-        run: npx semantic-release
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@v2
