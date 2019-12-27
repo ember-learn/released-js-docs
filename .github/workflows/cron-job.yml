@@ -1,6 +1,9 @@
 name: Cron job
 
 on:
+  push:
+    branches:
+      - master
   schedule:
     - cron: "5 * * * *"
 
@@ -44,7 +47,6 @@ jobs:
 
       - name: Release
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.DEPLOY_GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
         run: npx semantic-release
