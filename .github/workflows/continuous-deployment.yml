@@ -40,11 +40,11 @@ jobs:
           # Optional glob pattern of files which should be added to the commit
           file_pattern: docs/**/*.json
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_DEPLOY_TOKEN }}
 
       - name: Semantic Release
         run: npx semantic-release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_DEPLOY_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_DEPLOY_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
