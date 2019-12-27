@@ -1,7 +1,7 @@
 {
   "name": "@ember-learn/released-js-docs",
   "version": "1.0.0",
-  "repository": "https://github.com/ember-learn/released-js-docs.git",
+  "repository": "https://github.com/sivakumar-kailasam/released-js-docs.git",
   "license": "MIT",
   "author": "Sivakumar Kailasam <siva@rubberduck.engineering>",
   "main": "index.js",
