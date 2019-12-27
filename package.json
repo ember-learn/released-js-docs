@@ -1,13 +1,17 @@
 {
   "name": "@ember-learn/released-js-docs",
   "version": "1.0.0",
-  "repository": "https://github.com/sivakumar-kailasam/released-js-docs.git",
+  "description": "Contains api source docs for ember repositories",
+  "homepage": "https://github.com/sivakumar-kailasam/released-js-docs#readme",
+  "bugs": {
+    "url": "https://github.com/sivakumar-kailasam/released-js-docs/issues"
+  },
   "license": "MIT",
   "author": "Sivakumar Kailasam <siva@rubberduck.engineering>",
   "main": "index.js",
   "scripts": {
-    "start": "node -r esm lib/index.js",
-    "prepack": "node -r esm lib/prepare-for-publish.js"
+    "prepack": "node -r esm lib/prepare-for-publish.js",
+    "start": "node -r esm lib/index.js"
   },
   "devDependencies": {
     "@semantic-release/git": "^7.0.18",
