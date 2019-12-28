@@ -8,7 +8,8 @@ on:
     - cron: "5 * * * *"
 
 jobs:
-  publish:
+  add-new-docs:
+    name: Add new docs
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
     env:
@@ -43,10 +44,24 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Semantic Release
+  release:
+    name: Release package
+    runs-on: ubuntu-latest
+    needs: add-new-docs
+    if: github.event_name != 'pull_request'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v1
+
+      - name: Set up Volta
+        uses: rwjblue/setup-volta@v1
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Run semantic release
         run: npx semantic-release
-        if: github.event_name != 'pull_request'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
