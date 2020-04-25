@@ -1,6 +1,6 @@
 {
   "name": "@ember-learn/released-js-docs",
-  "version": "24.0.0",
+  "version": "25.0.0",
   "description": "Contains api source docs for ember-source & ember-data",
   "homepage": "https://github.com/ember-learn/released-js-docs#readme",
   "bugs": {
